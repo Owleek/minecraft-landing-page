@@ -108,7 +108,8 @@
 
 .action-card {
     display: flex;
-    z-index: 10;
+    position: relative;
+    z-index: 50;
 
     @include respond(md) {
         flex-direction: column;
@@ -138,11 +139,12 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 50% 50%;
+            z-index: 1;
         }
 
         @include respond(md) {
-            max-width: 300px;
-            max-height: 300px;
+            max-width: 280px;
+            max-height: 280px;
         }
     }
     
@@ -204,9 +206,15 @@
     }
 }
 
-.play-section {
+.action-section {
     padding: 160px 0;
+    
+    @include respond(md) {
+        padding: 55px 0 40px;
+    }
+}
 
+.play-section {
     &:before {
         width: 795px;
         height: 495px;
@@ -237,18 +245,7 @@
         }
     }
 
-    @include respond(md) {
-        padding: 55px 0 40px;
-    }
-
-    &__card {
-
-    }
-
     .action-card {
-        position: relative;
-
-
         &__info {
             padding-left: 15px;
     
@@ -297,6 +294,72 @@
 
             @include respond(xs) {
                 max-width: 250px;
+            }
+        }
+    }
+}
+
+.create-section {
+    background-color: $solitude;
+
+    &:before {
+        width: 690px;
+        height: 495px;
+        top: auto;
+        left: -125px;
+        bottom: -200px; 
+        background-image: url("../images/tracery-3.png");
+    }
+
+    &:after {
+        width: 400px;
+        height: 495px;
+        top: -65px; right: 0px;
+        background-image: url("../images/tracery-4.png");
+    }
+
+    .action-card {
+        padding-left: 125px;
+
+        @include respond(xl) {
+            padding-left: 0px;
+        }
+
+        &__image-container {
+            text-align: left;
+            
+            @include respond(xl) {
+                padding-left: 25px;
+            }
+
+            @include respond(md) {
+                order: -1;
+                padding-left: 0px;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+        }
+    
+        &__image-box {
+            margin-top: -25px;
+
+            @include respond(md) {
+                margin-top: 0px;
+            }
+    
+            &:after {
+                left: -45px;
+                bottom: 0px;
+                height: 190px;
+                width: calc(100% + 120px);
+                background-image: url("../images/shadow-2.png");
+
+                @include respond(md) {
+                    width: calc(100% + 90px);
+                    height: 120px;
+                    left: -40px;
+                    bottom: -7px;
+                }
             }
         }
     }
