@@ -206,15 +206,13 @@
     }
 }
 
-.action-section {
+.play-section {
     padding: 160px 0;
     
     @include respond(md) {
-        padding: 55px 0 40px;
+        padding: 60px 0 45px;
     }
-}
 
-.play-section {
     &:before {
         width: 795px;
         height: 495px;
@@ -222,13 +220,10 @@
         background-image: url("../images/tracery-1.png");
 
         @include respond(md) {
-            width: 384px;
-            height: 238px;
-        }
-
-        @include respond(xs) {
-            width: 280px;
-            height: 175px;
+            width: 500px;
+            height: 312px;
+            top: -40px;
+            left: -60px;
         }
     }
 
@@ -302,6 +297,12 @@
 .create-section {
     background-color: $solitude;
 
+    padding: 130px 0 120px;
+    
+    @include respond(md) {
+        padding: 60px 0 45px;
+    }
+
     &:before {
         width: 690px;
         height: 495px;
@@ -309,6 +310,13 @@
         left: -125px;
         bottom: -200px; 
         background-image: url("../images/tracery-3.png");
+
+        @include respond(md) {
+            width: 400px;
+            height: 266px;
+            left: -45px;
+            bottom: -165px;
+        }
     }
 
     &:after {
@@ -316,12 +324,19 @@
         height: 495px;
         top: -65px; right: 0px;
         background-image: url("../images/tracery-4.png");
+        
+        @include respond(md) {
+            width: 250px;
+            height: 312px;
+            top: -85px;
+            right: -55px;
+        }
     }
 
     .action-card {
-        padding-left: 125px;
+        padding-left: 130px;
 
-        @include respond(xl) {
+        @include respond(lg) {
             padding-left: 0px;
         }
 
@@ -346,6 +361,11 @@
             @include respond(md) {
                 margin-top: 0px;
             }
+
+            @include respond(xs) {
+                width: 230px;
+                height: 230px;
+            }
     
             &:after {
                 left: -45px;
@@ -359,6 +379,11 @@
                     height: 120px;
                     left: -40px;
                     bottom: -7px;
+                }
+
+                @include respond(xs) {
+                    left: -30px;
+                    bottom: -4px;
                 }
             }
         }
