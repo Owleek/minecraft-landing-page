@@ -1,8 +1,7 @@
-@import "reset";
+@import "libs";
 @import "variables";
 @import "mixin";
 @import "default";
-@import "libs";
 
 .head-section {
     min-height: 100vh;
@@ -46,25 +45,9 @@
         @include respond(md) {
             padding: 15px 0;
         }
-    } 
-
-    &__bricks {
-        width: 0;
-        height: 0;
-        margin: 0 auto;
-        position: relative;
     }
 
-    &__cube {
-        width: 165px;
-        position: absolute;
-        display: block;
-        z-index: 10;
-
-        @include respond(md) {
-            width: 75px;
-        }
-        
+    .cube {
         &_lg {
             top: 20vh; 
             left: -418px;
@@ -76,12 +59,10 @@
         }
 
         &_md {
-            width: 120px;
             top: -10vh;
             left: 295px;
 
             @include respond(md) {
-                width: 55px;
                 top: -40px;
                 left: 115px;    
             }
@@ -92,17 +73,14 @@
         }
 
         &_sm {
-            width: 75px;
             top: -15vh;
             left: -390px;
 
             @include respond(md) {
-                width: 35px;
                 top: -45px;
                 left: -145px;
             }
         }
-
     }
 }
 
@@ -389,3 +367,183 @@
         }
     }
 }
+
+.comments-section {
+    min-height: 737px;
+    background-image: url("../images/bottom-bg-darken.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    @include respond(md){
+        min-height: 585px;
+    }
+    
+    @include respond(us){
+        min-height: 100vh;
+    }
+
+    &__title {
+        font-size: 2.25rem;
+        padding: 35px 0;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: #ffffff;
+
+        @include respond(md) {
+            font-size: 1.875rem;
+            padding: 30px 0;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .substrate {
+        background-color: rgba(0, 0, 0, 0.66);
+    }
+
+    .cube {
+        &_lg {
+            top: 510px;
+            left: -520px;
+
+            @include respond(lg) {
+                left: -500px;
+            }
+
+            @include respond(md) {
+                width: 115px;
+                top: 410px;
+                left: -220px;
+            }
+
+            @include respond(us) {
+                top: 430px;
+                left: -150px
+            }
+        }
+
+        &_md {
+            top: -185px;
+            left: 375px;
+
+            @include respond(md) {
+                width: 85px;
+                top: -140px;
+                left: 100px;    
+            }
+
+            @include respond(us) {
+                left: 70px;    
+            }
+        }
+
+        &_sm {
+            top: 35px;
+            left: -320px;
+
+            @include respond(md) {
+                width: 48px;
+                top: 38px;
+                left: -147px;
+            }
+        }
+
+        &_sm-right {
+            left: auto;
+            top: 350px;
+            right: -355px;
+            transform: rotate(4deg);
+
+            @include respond(md) {
+                top: 330px;
+                right: -155px;
+            }
+        }
+    }
+
+    .comments-carousel {
+        &__item {}
+    }
+
+    .author-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__image-box {
+            max-width: 250px;
+            max-height: 250px;
+            margin-bottom: -24px;
+
+            @include respond(md) {
+                max-width: 210px;
+                max-height: 210px;  
+                margin-bottom: -15px;
+            }
+        }
+
+        &__image {}
+
+        &__info {
+            max-width: 675px;
+            margin: 0 auto;
+            padding: 15px 55px;
+            border-radius: 200px;
+            background-color: rgba(255, 255, 255, 0.9);
+
+            @include respond(md) {
+                max-width: 340px;
+                padding: 15px 45px;
+            }
+        }
+
+        &__name {
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            
+            @include respond(md) {
+                font-size: 0.8125rem;
+            }
+        }
+
+        &__comment {
+            margin-bottom: 30px;
+            line-height: 1.315;
+            position: relative;
+
+            @include respond(md) {
+                font-size: 0.9375rem;
+            }
+
+            .icon-quote {
+                position: absolute;
+                left: -40px;
+                top: -10px;
+                font-size: 23px;
+                color: $light-sea-green;
+
+                @include respond(md) {
+                    left: -27px;
+                    top: -12px;
+                    font-size: 18px;
+                }
+
+                &_right{
+                    left: auto;
+                    right: -25px;
+                    top: -13px;
+                    transform: rotate(180deg);
+
+                    @include respond(md) {
+                        right: -32px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+

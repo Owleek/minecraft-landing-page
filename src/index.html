@@ -13,6 +13,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/scripts.js"></script>
 
 </head>
@@ -25,14 +26,14 @@
                     <img src="images/logo.png" alt="Minecraft">
                 </a>
             </div>
-            <div class="head-section__bricks">
-                <span class="head-section__cube head-section__cube_sm">
+            <div class="bricks">
+                <span class="cube cube_sm">
                     <img src="images/sm-cube.png" alt="">
                 </span>
-                <span class="head-section__cube head-section__cube_md">
+                <span class="cube cube_md">
                     <img src="images/md-cube.png" alt="">
                 </span>
-                <span class="head-section__cube head-section__cube_lg">
+                <span class="cube cube_lg">
                     <img src="images/lg-cube.png" alt="">
                 </span>
             </div>
@@ -123,22 +124,57 @@
             <h2 class="comments-section__title substrate">
                 Отзывы
             </h2>
-            <div class="comments-section__carousel comments-carousel">
-                <div class="comments-carousel__item author-card">
-                    <div class="author-card__image-box">
-                        <img src="images/comments-author-d-sh.png" alt="" class="comments-card__image">
-                    </div>
-                    <div class="author-card__info">
-                        <p class="author-card__name">
-                            Тимур Смирнов
-                        </p>
-                        <p class="author-card__comment">
-                            Не думай как играть, просто играй! Здесь нет одного пути, каждый выбирает свой путь сам,
-                            Minecraft - это свобода выбора и действий.
-                        </p>
-                    </div>
-                </div>
+            <div class="bricks">
+                <span class="cube cube_sm">
+                    <img src="images/sm-cube.png" alt="">
+                </span>
+                <span class="cube cube_sm cube_sm-right">
+                    <img src="images/sm-cube.png" alt="">
+                </span>
+                <span class="cube cube_md">
+                    <img src="images/md-cube.png" alt="">
+                </span>
+                <span class="cube cube_lg">
+                    <img src="images/lg-cube.png" alt="">
+                </span>
             </div>
+            <div class="layout-center">
+                <div class="comments-carousel owl-carousel owl-theme">
+                    <div class="item author-card">
+                        <div class="author-card__image-box">
+                            <img src="images/comments-author-d-sh.png" alt="" class="comments-card__image">
+                        </div>
+                        <div class="author-card__info">
+                            <p class="author-card__name">
+                                Тимур Смирнов
+                            </p>
+                            <p class="author-card__comment">
+                                <i class="icon-quote"></i>
+                                Не думай как играть, просто играй! Здесь нет одного пути, каждый выбирает свой путь сам,
+                                Minecraft - это свобода выбора и действий.
+                                <i class="icon-quote icon-quote_right"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item author-card">
+                        <div class="author-card__image-box">
+                            <img src="images/comments-author-d-sh.png" alt="" class="comments-card__image">
+                        </div>
+                        <div class="author-card__info">
+                            <p class="author-card__name">
+                                Имя Фамилия
+                            </p>
+                            <p class="author-card__comment">
+                                <i class="icon-quote"></i>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto deleniti, eum
+                                laudantium perferendis, laborum aliquam, voluptatum odio obcaecati dolorem vero ipsum
+                                enim dolore. Error repudiandae ducimus magni architecto dolore? Laborum?
+                                <i class="icon-quote icon-quote_right"></i>
+                            </p>
+                        </div>
+                    </div><!-- /item -->
+                </div><!-- /comments-carousel -->
+            </div><!-- /layout-center -->
         </section><!-- /comments-section -->
         <footer class="footer section">
             <div class="layout-center">
