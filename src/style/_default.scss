@@ -1,6 +1,5 @@
 body {
     font-size: 1.125rem;
-    line-height: 1.5;
     color: $text-color;
     min-width: 320px;
     font-family: sans-serif;
@@ -27,7 +26,7 @@ h3, h4, h5 {
 }
 
 p {
-    margin: 0rem 0rem 1.5rem 0rem;
+    margin: 0rem 0rem 1.25rem 0rem;
     font-size: 1.25rem;
     line-height: 1.57;
 }
@@ -69,9 +68,18 @@ img {
     transition: all 0.15s ease-in;
 
     &__subject {
+        display: block;
         font-size: 0.75rem;
         font-weight: normal;
-        display: block;
+        padding-top: 3px;
+    }
+    
+    @include respond(md) {
+        padding: 15px 50px;
+    }
+ 
+    @include respond(xs) {
+        padding: 15px 45px;
     }
     
     &:before,
@@ -171,6 +179,22 @@ img {
 .layout-center {
     max-width: 1340px;
     margin: 0 auto;
+
+    @include respond(xl) {
+        padding: 0 100px;
+    }
+
+    @include respond(lg) {
+        padding: 0 70px;
+    }
+
+    @include respond(sm) {
+        padding: 0 30px;
+    }
+
+    @include respond(xs) {
+        padding: 0 20px;
+    }
 }
 
 .substrate {

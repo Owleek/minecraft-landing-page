@@ -105,3 +105,199 @@
 
     }
 }
+
+.action-card {
+    display: flex;
+    z-index: 10;
+
+    @include respond(md) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__image-container,
+    &__info {
+        flex-basis: 50%;
+    }
+
+    &__image-container {
+        text-align: center;
+    }
+
+    &__image-box {
+        display: inline-block;
+        max-width: 560px;
+        max-height: 420px;
+        position: relative;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0; bottom: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+
+        @include respond(md) {
+            max-width: 300px;
+            max-height: 300px;
+        }
+    }
+    
+    &__image {
+    }
+
+    &__info {
+    }
+
+    &__title {
+        font-size: 2.25rem;
+        text-transform: uppercase;
+
+        @include respond(md) {
+            font-size: 1.875rem;
+        }
+    }
+
+    &__desc {
+        max-width: 550px;
+        font-size: 1.125rem;
+        line-height: 1.3;
+
+        &:last-of-type {
+            margin-bottom: 2.5rem;
+
+            @include respond(sm) {
+                margin-bottom: 1.875rem;
+            }
+        }
+
+        @include respond(sm) {
+            font-size: 1rem;
+            max-width: 350px;
+        }
+    }
+
+    &__button-holder {
+        @include respond(md) {
+            text-align: center;
+        }
+    }
+}
+
+.section {
+    position: relative;
+    overflow: hidden;
+    
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        z-index: 0;
+    }
+}
+
+.play-section {
+    padding: 160px 0;
+
+    &:before {
+        width: 795px;
+        height: 495px;
+        left: 0;
+        background-image: url("../images/tracery-1.png");
+
+        @include respond(md) {
+            width: 384px;
+            height: 238px;
+        }
+
+        @include respond(xs) {
+            width: 280px;
+            height: 175px;
+        }
+    }
+
+    &:after {
+        width: 490px;
+        height: 495px;
+        right: 0; top: 205px;
+        background-image: url("../images/tracery-2.png");
+
+        @include respond(md) {
+            top: 445px;
+            width: 303px;
+            height: 310px;
+        }
+    }
+
+    @include respond(md) {
+        padding: 55px 0 40px;
+    }
+
+    &__card {
+
+    }
+
+    .action-card {
+        position: relative;
+
+
+        &__info {
+            padding-left: 15px;
+    
+            @include respond(xl) {
+                padding-left: 40px;
+            }
+
+            @include respond(md) {
+                padding-left: 0px;
+            }
+        }
+
+        &__image-container {
+            @include respond(md) {
+                margin-bottom: 50px;
+            }
+        }
+
+        &__image-box {
+            &:after {
+                left: -10px;
+                bottom: -40px;
+                height: 130px;
+                width: calc(100% + 140px);
+                background-image: url("../images/shadow-1.png");
+
+                @include respond(md) {
+                    height: 70px;
+                    width: calc(100% + 70px);
+                    left: -5px;
+                    bottom: -15px;
+                }
+
+                @include respond(xs) {
+                    height: 50px;
+                    width: calc(100% + 30px);
+                    left: 5px;
+                    bottom: -20px;
+                }
+            }
+
+            @include respond(md) {
+                max-width: 280px;
+                max-height: 210px;
+            }
+
+            @include respond(xs) {
+                max-width: 250px;
+            }
+        }
+    }
+}
