@@ -64,7 +64,7 @@ img {
     white-space: nowrap;
     border-radius: 100px;
     cursor: pointer;
-    transition: all 0.15s ease-in;
+    transition: all 0.2s ease-in;
 
     &__subject {
         display: block;
@@ -74,7 +74,7 @@ img {
     }
     
     @include respond(md) {
-        padding: 15px 50px;
+        padding: 15px 54px;
     }
  
     @include respond(xs) {
@@ -83,29 +83,46 @@ img {
     
     &:before,
     &:after {
-        content: "";
+        content: "\f103";
         top: 50%;
-        width: 16px;
-        height: 16px;
         position: absolute;
         transform: translateY(-50%);
-        background-image: url("../images/arrows.png");
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
+        font-family: "fontello";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 16px;
+        margin-right: 10px;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        margin-left: 10px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
 
         @include respond(md) {
-            width: 12px;
-            height: 12px;
+            font-size: 24px;
         }
     }
 
     &:before {
-        left: 20px;
+        left: 10px;
+
+        @include respond(md) {
+            left: 5px;
+        }
     }
 
     &:after {
-        right: 20px;
+        right: 10px;
+
+        @include respond(md) {
+            right: 5px;
+        }
     }
 
     &_huge {
@@ -122,36 +139,34 @@ img {
 
         &:before,
         &:after {
-            width: 24px;
-            height: 24px;
+            font-size: 45px;
 
             @include respond(md) {
-                width: 14px;
-                height: 14px;
+                font-size: 28px;
             }
         }
 
         &:before {
-            left: 40px;
+            left: 34px;
 
             @include respond(md) {
-                left: 20px;
+                left: 10px;
             }
 
-            @include respond(md) {
-                left: 15px;
+            @include respond(us) {
+                left: 5px;
             }
         }
     
         &:after {
-            right: 40px;
+            right: 44px;
 
             @include respond(md) {
-                right: 20px;
+                right: 10px;
             }
 
-            @include respond(md) {
-                right: 15px;
+            @include respond(us) {
+                right: 5px;
             }
         }
 
@@ -167,6 +182,7 @@ img {
     }
 
     &:hover {
+        color: inherit;
     }
 }
 

@@ -33,6 +33,7 @@
     &__logo {
         display: inline-block;
         width: 750px;
+        cursor: default;
 
         @include respond(md) {
             width: 270px;
