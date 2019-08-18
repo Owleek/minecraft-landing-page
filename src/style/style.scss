@@ -415,7 +415,7 @@
             }
 
             @include respond(us) {
-                left: -150px
+                left: -190px
             }
         }
 
@@ -460,6 +460,10 @@
 
     .comments-carousel {
         &__item {}
+
+        .owl-nav {
+            display: none !important;
+        }
     }
 
     .author-card {
@@ -542,6 +546,62 @@
 
             }
         }
+    }
+
+}
+
+.controls-holder {
+    padding-bottom: 40px;
+}
+
+.controls {
+    position: relative;
+    width: 0;
+    height: 40px;
+    margin: 0 auto;
+
+    .next,
+    .prev {
+        display: inline-block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: -150px;
+        border: 3px solid #ffffff;
+        border-radius: 50%;
+        color: #ffffff;
+        z-index: 100;
+        cursor: pointer;
+        text-decoration: none;
+        user-select: none;
+
+        @include respond(md) {
+            top: 0px;
+        }
+    }
+    
+    .next {
+        right: -435px;
+
+        @include respond(md) {
+            right: -50px;
+        }
+    }
+    
+    .prev {
+        left: -430px;
+        transform: rotate(180deg);
+
+        @include respond(md) {
+            left: -50px;
+        }
+    }
+
+    .icon-right {
+        font-size: 20px;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 

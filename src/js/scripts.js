@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
+    var owl = $(".owl-carousel");
+
+	owl.owlCarousel({
         loop:true,
         margin:10,
         nav:true,
@@ -9,5 +11,12 @@ $(document).ready(function(){
                 items:1
             },
         }
-    })
+    });
+
+	$(".next").click(function(){
+		owl.trigger("next.owl.carousel");
+	});
+	$(".prev").click(function(){
+		owl.trigger("prev.owl.carousel");
+	});
 });
